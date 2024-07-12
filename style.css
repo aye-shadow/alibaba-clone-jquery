@@ -1,0 +1,75 @@
+:root {
+    --main-orange: 254, 104, 0;
+    --main-brown: 58, 25, 10;
+    --lighter-brown: #402013;
+    --lightest-brown: #4e3226;
+    --border-col: #dddddd;
+    --shadow-col: #C1C1C1;
+    --gray-bg: #f4f4f4;
+    --yellow: #fdc100;
+    --blue: # ;
+    --blue-rgb: 0, 141, 254;
+    --dark-blue: #1e293b;
+    --dark-blue-rgb: 30, 41, 59;
+    --footer-grey: #344154;
+    --footer-text-grey: #687385;
+  } 
+  
+
+  .blueText {
+    color: #008dfe; /* Adjust color as needed */
+  }
+
+  .blueBg {
+    background-color: #008dfe; /* Adjust color as needed */
+  }
+
+  .borderCol {
+    border-color: var(--border-col); /* Adjust color as needed */
+  }
+
+  .darkBlueText {
+    color: var(--dark-blue); /* Adjust color as needed */
+  }
+
+  .navbar-background {
+    background-image: url('img/122768-pastel-blue-distressed-watercolour-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .footerGridItem a:hover {
+    text-decoration: underline;
+  }
+
+  .footerGreyText {
+    color: #687385; /* Adjust color as needed */
+  }
+
+  .blackGradient {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%);
+  }
+
+  .semiTransparentWhiteBg {
+    background: rgba(255, 255, 255, 0.1); /* Adjust transparency as needed */
+  }
+
+  .semiTransparentWhiteBgIcon {
+    background: rgba(255, 255, 255, 0.2); /* Adjust transparency as needed */
+  }
+
+  .darkBlueBg {
+    background: var(--dark-blue); /* Adjust color as needed */
+  }
+
+  .shadow-col {
+    box-shadow: 0 0 10px var(--shadow-col); /* Adjust color as needed */
+  }
+
+  .darkBlueTrans {
+    background: rgba(var(--dark-blue-rgb), 0.6);
+  }
+
+  .blackTrans {
+    background: rgba(0, 0, 0, 0.35)
+  }

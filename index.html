@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOKA</title>
+  <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* .navbarHeader {
+      color: white;
+    } */
+
+    .navbarHeader li:hover, #categoriesHeaderSection li:hover {
+      text-decoration: underline;
+    }
+
+    .navbarSignupButton {
+      color: white;
+    }
+
+    .footerList {
+      color: var(--footer-text-grey)
+    }
+
+    /* .navbarHeader:hover {
+      background: white;
+      color: black;
+    }
+
+    .navbarHeader:hover .buttonWhiteText {
+      color: white;
+    } */
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="w-full fixed top-0 left-0 z-30">
+    <div id="navbarv1beforescroll" class="relative">
+      <div class="flex flex-row justify-between items-center px-9 py-2 relative navbar-background">
+        <h1 class="flex flex-row items-center z-10">
+          <span class="text-xl">
+            <span class="font-bold uppercase">
+              <span id="co-text" class="blueText">CO</span>CREATE<span id="colon-text" class="blueText">:</span></span>2024
+          </span>
+          <span class="text-xs px-2 hidden lg:block">|</span> 
+          <span class="hidden lg:block">Join our award-winning flagship event with FREE hotel stay!</span>
+        </h1>
+        <button class="blueBg text-white rounded-full px-7 pb-1 z-10">Get tickets</button>
+      </div>
+      <div class="relative">
+        <div id="navbarHeader" class="navbarHeader pt-2 text-white">
+          <div class="flex justify-between px-9 py-1 relative">
+            <h1 class="text-3xl">
+              <a href='#' class="flex items-center gap-2 relative">
+                <img id="logoWhite" src="img/new_logo_.png" class="h-5 mt-1">
+                <img id="logoDark" src="img/new_logo_dak.png" class="h-5 mt-1 hidden">
+                <span><span class="font-bold">DOKA.</span>com</span>
+              </a>
+            </h1>
+            <div class="flex items-center gap-7">
+              <div class="hidden sm:block">
+                <p class="text-sm">Deliver to:</p>
+                <div class="flex items-center gap-1">
+                  <i class="fas fa-flag-usa"></i> <span class="font-bold">HK</span>
+                </div>
+              </div>
+              <div class="hidden sm:block">
+                <i class="fas fa-globe text-2xl"></i>
+              </div>
+              <div class="hidden sm:block">
+                <i class="far fa-user text-xl"></i>
+              </div>
+              <button id="navbarSignupButton" class="text-white blueBg rounded-full px-8 py-2">Sign up</button>
+            </div>
+          </div>
+          <div id="navbarCategoriesSection" class="flex justify-between px-9 pt-3 text-xs">
+            <ul class="flex gap-4">
+              <a href='#'><li id="categoriesLink" class="flex gap-1 items-center h-full pb-5"><i class="fas fa-list-ul"></i> All Categories</li></a>
+              <a href='#'><li>Featured selections</li></a>
+              <a href='#'><li>Trade Assurance</li></a>
+            </ul>
+            <div class="hidden lg:block">
+              <ul class="flex gap-4">
+                <a href='#'><li>Buyer Assurance</li></a>
+                <a href='#'><li>Help Center</li></a>
+                <a href='#'><li>Become a Supplier</li></a> | 
+                <a href='#'><li>Login</li></a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <section class="relative mx-9">
+          <div id="categoriesHeaderSection" style="max-width: 600px;" class="hidden">
+              <div class="h-3"></div>
+              <div class="px-9 grid grid-cols-3 bg-white py-3 rounded-md">
+                  <div>
+                      <h3 class="uppercase font-bold text-sm pb-2">payments</h3>
+                      <ul class="text-xs" style="color: #687385">
+                          <a href='#'><li class="pb-2 font-semibold">Payments</li></a>
+                          <a href='#'><li class="pb-2 font-semibold">Terminal</li></a>
+                          <a href='#'><li class="pb-2 font-semibold">Connect</li></a>
+                          <a href='#'><li class="pb-2 font-semibold">Billing</li></a>
+                      </ul>
+                  </div>
+                  <div>
+                      <h3 class="uppercase font-bold text-sm pb-2">payouts</h3>
+                      <ul class="text-xs" style="color: #687385">
+                          <a href='#'><li class="pb-2 font-semibold">Payouts</li></a>
+                          <a href='#'><li class="pb-2 font-semibold">Issuing</li></a>
+                      </ul>
+                  </div>
+                  <div>
+                      <h3 class="uppercase font-bold text-sm pb-2">business operations</h3>
+                      <ul class="text-xs" style="color: #687385">
+                          <a href='#'><li class="pb-2 font-semibold">Radar</li></a>
+                          <a href='#'><li class="pb-2 font-semibold">Sigma</li></a>
+                          <a href='#'><li class="pb-2 font-semibold">Atlas</li></a>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div id="navbarv2afterscroll" class="hidden text-black">
+      <div class="h-fit bg-white flex justify-between items-center px-8 py-3">
+        <h1 class="text-2xl blueText">
+          <a href='#' class="flex items-center gap-2 relative">
+            <img id="logoWhite" src="img/new_logo_blu.png" class="h-5 mt-1">
+            <span class="font-bold">DOKA.</span>com
+          </a>
+        </h1>
+        <div class="flex items-center gap-7">
+          <div class="hidden sm:block">
+            <p class="text-sm">Deliver to:</p>
+            <div class="flex items-center gap-1 blueText">
+              <i class="fas fa-flag-usa"></i> <span class="font-bold">HK</span>
+            </div>
+          </div>
+          <div class="hidden sm:block">
+            <i class="fas fa-globe text-xl"></i>
+          </div>
+          <div class="hidden sm:block">
+            <i class="far fa-user text-xl"></i>
+          </div>
+          <button class="blueBg rounded-full px-8 pt-1 pb-2 text-white">Sign up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Home Screen Big Image -->
+  <section class="w-full h-screen relative p-9">
+    <img
+      alt="HomeImage"
+      src="img/Breaking-Down-People-B2B-Buying-Decisions.webp"
+      class="z-0 absolute top-0 left-0 w-full h-full object-cover"
+    />
+    <div class="blackGradient w-full h-full absolute top-0 left-0"></div>
+    <div
+      class="z-10 text-white relative h-full w-full flex flex-col justify-center pt-36"
+      style="max-width: 600px;"
+    >
+      <div class="flex items-center gap-2 pb-4">
+        <i class="fas fa-circle-play"></i> Learn about Alibaba.com
+      </div>
+      <h1 class="font-bold text-2xl pb-7 lg:text-3xl">
+        The leading B2B ecommerce platform for global trade
+      </h1>
+      <div class="bg-white rounded-3xl pr-1 pl-4 py-1 flex flex-row items-center justify-between text-xs relative mr-9">
+        <input
+          type="text"
+          placeholder="used mobile phones"
+          class="text-black border-0 outline-none"
+        />
+        <div class="flex items-center gap-2">
+          <button>
+            <i class="fas fa-camera text-black text-lg"></i>
+          </button>
+          <button class="blueBg flex flex-row items-center text-white rounded-2xl py-2 px-4 gap-2">
+            <i class="fas fa-magnifying-glass"></i> Search
+          </button>
+        </div>
+      </div>
+      <div class="flex text-xs sm:text-sm pt-9 gap-5 items-center">
+        <p>Frequently searched:</p>
+        <button class="border rounded-2xl px-5 py-1" style="background: rgba(255, 255, 255, 0.2)">
+          samsung mobile phone
+        </button>
+        <button class="border rounded-2xl px-5 py-1 hidden sm:block" style="background: rgba(255, 255, 255, 0.2)">
+          samsung s24 ultra
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 4 Blue/White Cards -->
+  <section class="w-full h-fit px-16 sm:px-7 py-12 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 darkBlueBg">
+    <div class="rounded-xl relative px-7 py-12 text-white semiTransparentWhiteBg">
+      <div class="rounded-full text-3xl py-2 px-3 inline semiTransparentWhiteBgIcon">
+        <i class="fas fa-th-large"></i>
+      </div>
+      <h2 class="font-bold text-lg pt-8">Millions of business offerings</h2>
+      <p class="pt-4 text-xs">
+        Explore products and suppliers for your business from millions of offerings worldwide.
+      </p>
+    </div>
+    <div class="rounded-xl relative p-7 py-12 text-white semiTransparentWhiteBg">
+      <div class="rounded-full text-3xl py-2 px-3 inline semiTransparentWhiteBgIcon">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h2 class="font-bold text-lg pt-8">Assured quality and transactions</h2>
+      <p class="pt-4 text-xs">
+        Ensure production quality from verified suppliers, with your orders protected from payment to delivery.
+      </p>
+    </div>
+    <div class="rounded-xl relative p-7 py-12 text-white semiTransparentWhiteBg">
+      <div class="rounded-full text-3xl py-2 px-4 inline semiTransparentWhiteBgIcon">
+        <i class="fas fa-box"></i>
+      </div>
+      <h2 class="font-bold text-lg pt-8">One-stop trading solution</h2>
+      <p class="pt-4 text-xs">
+        Order seamlessly from product/supplier to search order management, payment, and fulfillment.
+      </p>
+    </div>
+    <div class="rounded-xl relative p-7 py-12 text-white semiTransparentWhiteBg">
+      <div class="rounded-full text-3xl py-2 px-4 inline semiTransparentWhiteBgIcon">
+        <i class="fas fa-rss"></i>
+      </div>
+      <h2 class="font-bold text-lg pt-8">Tailored trading experience</h2>
+      <p class="pt-4 text-xs">
+        Get current benefits, such as exclusive discounts, enhanced protection, and extra support, to help grow your business every step of the way.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- 4 Statistics -->
+  <section class="px-9 pt-24 pb-12 lg:flex">
+    <h1 class="font-bold text-3xl pr-7 pb-12">
+      Explore millions of offerings tailored to your business needs
+    </h1>
+    <section class="grid grid-cols-2 gap-5">
+      <div class="relative border-l-2 pl-2 borderCol">
+        <h2 class="text-2xl md:text-3xl font-normal blueText">200M+</h2>
+        <p class="text-xs md:text-sm darkBlueText">products</p>
+      </div>
+      <div class="relative border-l-2 pl-2 borderCol">
+        <h2 class="text-2xl md:text-3xl font-normal blueText">200K+</h2>
+        <p class="text-xs md:text-sm darkBlueText">suppliers</p>
+      </div>
+      <div class="relative border-l-2 pl-2 borderCol">
+        <h2 class="text-2xl md:text-3xl font-normal blueText">5,900</h2>
+        <p class="text-xs md:text-sm darkBlueText">product categories</p>
+      </div>
+      <div class="relative border-l-2 pl-2 borderCol">
+        <h2 class="text-2xl md:text-3xl font-normal blueText">200+</h2>
+        <p class="text-xs md:text-sm darkBlueText">countries and regions</p>
+      </div>
+    </section>
+  </section>
+
+
+  <!-- All the Categories -->
+  <section class="w-full p-9 relative">
+    <section class="h-full w-full absolute top-0 left-0 flex justify-between items-center px-9 z-20">
+      <button
+        id="scrollLeftButton"
+        class="py-2 px-5 rounded-full bg-white text-2xl opacity-0 pointer-events-none shadow-col"
+      >
+        &#x276E;
+      </button>
+      <button
+        id="scrollRightButton"
+        class="py-2 px-5 rounded-full bg-white text-2xl shadow-col"
+      >
+        &#x276F;
+      </button>
+    </section>
+    <section
+      id="scrollContainer"
+      class="grid grid-rows-2 grid-flow-col gap-y-5 gap-x-7 overflow-hidden relative z-0"
+    >
+      <!-- Add your category buttons here -->
+      <button class="h-32 w-32 flex flex-col items-center justify-center p-4 rounded-full border">
+        <div class="text-2xl">&#9733;</div>
+        <div class="text-center mt-2 text-xs">Buyer's Logistic Services and Market</div>
+      </button>
+      <button class="h-32 w-32 flex flex-col items-center justify-center p-4 rounded-full border">
+        <div class="text-2xl">&#128086;</div>
+        <div class="text-center mt-2 text-xs">Apparel & Accessories</div>
+      </button>
+      <button class="h-32 w-32 flex flex-col items-center justify-center p-4 rounded-full border">
+        <div class="text-2xl">&#9749;</div>
+        <div class="text-center mt-2 text-xs">Home & Garden</div>
+      </button>
+      <button class="h-32 w-32 flex flex-col items-center justify-center p-4 rounded-full border">
+        <div class="text-2xl">&#128736;</div>
+        <div class="text-center mt-2 text-xs">Industrial Machinery</div>
+      </button>
+      <button class="h-32 w-32 flex flex-col items-center justify-center p-4 rounded-full border">
+        <div class="text-2xl">&#128095;</div>
+        <div class="text-center mt-2 text-xs">Shoes & Accessories</div>
+      </button>
+      <button class="h-32 w-32 flex flex-col items-center justify-center p-4 rounded-full border">
+        <div class="text-2xl">&#128230;</div>
+        <div class="text-center mt-2 text-xs">Packaging & Printing</div>
+      </button>
+      <button class="h-32 w-32 flex flex-col items-center justify-center p-4 rounded-full border">
+        <div class="text-2xl">&#128295;</div>
+        <div class="text-center mt-2 text-xs">Tools & Hardware</div>
+      </button>
+      <button class="h-32 w-32 flex flex-col items-center justify-center p-4 rounded-full border">
+        <div class="text-2xl">&#128663;</div>
+        <div class="text-center mt-2 text-xs">Vehicle Parts & Accessories</div>
+      </button>
+      <button class="h-32 w-32 flex flex-col items-center justify-center p-4 rounded-full border">
+        <div class="text-2xl">&#127793;</div>
+        <div class="text-center mt-2 text-xs">Environment</div>
+      </button>
+      <button class="h-32 w-32 flex flex-col items-center justify-center p-4 rounded-full border">
+        <div class="text-2xl">&#127911;</div>
+        <div class="text-center mt-2 text-xs">Consumer Electronics</div>
+      </button>
+      <button class="h-32 w-32 flex flex-col items-center justify-center p-4 rounded-full border">
+        <div class="text-2xl">&#128170;</div>
+        <div class="text-center mt-2 text-xs">Sports & Entertainment</div>
+      </button>
+      <button class="h-32 w-32 flex flex-col items-center justify-center p-4 rounded-full border">
+        <div class="text-2xl">&#128132;</div>
+        <div class="text-center mt-2 text-xs">Beauty</div>
+      </button>
+      <button class="h-32 w-32 flex flex-col items-center justify-center p-4 rounded-full border">
+        <div class="text-2xl">&#128118;</div>
+        <div class="text-center mt-2 text-xs">Mothers, Kids & Toys</div>
+      </button>
+      <button class="h-32 w-32 flex flex-col items-center justify-center p-4 rounded-full border">
+        <div class="text-2xl">&#128142;</div>
+        <div class="text-center mt-2 text-xs">Jewellery & Eyewear</div>
+      </button>
+      <button class="h-32 w-32 flex flex-col items-center justify-center p-4 rounded-full border">
+        <div class="text-2xl">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+            <path d="M9 3.25a.75.75 0 0 1 .75.75v2.25h4.5V4a.75.75 0 0 1 1.5 0v2.25h.75A3.75 3.75 0 0 1 20.25 10v4.25h1a.75.75 0 0 1 0 1.5h-1v2.25a.75.75 0 0 1-1.5 0V15.75h-13v2.25a.75.75 0 0 1-1.5 0V15.75h-1a.75.75 0 0 1 0-1.5h1V10A3.75 3.75 0 0 1 8.25 6.25H9V4a.75.75 0 0 1 .75-.75zM6 10v4h12v-4a2.25 2.25 0 0 0-2.25-2.25h-7.5A2.25 2.25 0 0 0 6 10z"/>
+          </svg>
+        </div>
+        <div class="text-center mt-2 text-xs">Furniture</div>
+      </button>      
+      <button class="h-32 w-32 flex flex-col items-center justify-center p-4 rounded-full border">
+        <div class="text-2xl">&#128092;</div>
+        <div class="text-center mt-2 text-xs">Luggage, Bags & Cases</div>
+      </button>      
+    </section>
+    <div
+      id="rightGradient"
+      class="absolute inset-0 bg-gradient-to-r from-transparent to-white z-10 pointer-events-none"
+      style="background: linear-gradient(to right, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0.9) 100%); display: none;"
+    ></div>
+    <div
+      id="leftGradient"
+      class="absolute inset-0 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"
+      style="background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 20%); display: none;"
+    ></div>
+  </section>
+
+
+  <!-- redoing the 3 demonic cards -->
+  <section class="bg-gray-100 px-10 py-14">
+    <h1 class="font-bold text-2xl pb-7">
+      Discover your next business opportunity
+    </h1>
+    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+      <section class="flex flex-col" style="height: 530px">
+        <div class="flex justify-between items-end pb-3">
+          <h2 class="font-bold">Top Ranking</h2>
+          <p class="underline text-xs cursor-pointer">View more</p>
+        </div>
+        <div class="bg-white w-full flex-1 rounded-2xl px-4 py-5">
+          <div class="h-full w-full flex flex-col">
+            <h3 class="font-bold text-sm">Most popular</h3>
+            <p class="text-xs pb-4 text-gray-500">Umbrellas</p>
+            <div class="flex flex-col gap-4 flex-1">
+              <div class="rounded-lg w-full" style="height: 250px; background: url('img/umbrellas-2048px-04533.jpg') center no-repeat; background-size: cover;"></div>
+              <div class="flex-1">
+                <div class="grid grid-cols-3 gap-4 h-full">
+                  <img src="img/61H9y1lX+NL._AC_SL1500_.jpg" alt="Umbrella" class="rounded-md object-cover w-full h-full">
+                  <img src="img/insulated-stainless-steel-water-bottle-750ml-842761.webp" alt="Bottle" class="rounded-md object-cover w-full h-full">
+                  <img src="img/rsp-product-olight-s2r-baton-II-usb-magnetic-rechargeable-flashlight-ebrockob-011-2-9750afde97124c9fa82a32fee1f6df1d.jpeg" alt="Flashlight" class="rounded-md object-cover w-full h-full">
+                </div>
+              </div>
+            </div>
+          </div>        
+        </div>
+      </section>
+
+      <section class="flex flex-col" style="height: 530px">
+        <div class="flex justify-between items-end pb-3">
+          <h2 class="font-bold">New Arrivals</h2>
+          <p class="underline text-xs cursor-pointer">View more</p>
+        </div>
+        <div class="w-full flex-1">
+          <div class="h-full w-full flex flex-col">
+            <div class="flex flex-col gap-4 flex-1">
+              <div class="rounded-2xl px-4 py-5 bg-white">
+                <h3 class="font-bold text-sm pb-4">109,000+ products added today</h3>
+                <div class="rounded-lg w-full grid grid-cols-2 grid-rows-2 gap-4" style="height: 250px;">
+                  <div class="h-full w-full rounded-md" style="background: url('img/35059333-02.jpg') center; background-size: cover;"></div>
+                  <div class="h-full w-full rounded-md" style="background: url('img/Agra-Dining-Table-White-1.jpg') center; background-size: cover;"></div>
+                  <div class="h-full w-full rounded-md" style="background: url('img/best-packable-down-jackets.webp') center; background-size: cover;"></div>
+                  <div class="h-full w-full rounded-md" style="background: url('img/Singer-15-1-9-1.webp') center; background-size: cover;"></div>
+                </div>
+              </div>
+              <div class="flex-1 flew-grow rounded-2xl px-4 pb-5 py-3 bg-white relative">
+                <div class="flex flex-col relative h-full">
+                  <h2 class="font-bold pb-4">New This Week</h2>
+                  <div class="flex-1 grid grid-cols-2 gap-4">
+                    <div class="w-full rounded-md bg-center bg-cover aspect-square" style="background-image: url('img/71-HjENsPsL._AC_UF894%2C1000_QL80_.jpg');"></div>
+                    <div class="w-full rounded-md bg-center bg-cover aspect-square" style="background-image: url('img/ortery-ecommerce-photogrphy-systems-drone-example.jpg');"></div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+          </div>        
+        </div>
+      </section>
+
+      <section class="flex flex-col" style="height: 530px">
+        <div class="flex justify-between items-end pb-3">
+          <h2 class="font-bold">Savings spotlight</h2>
+          <p class="underline text-xs cursor-pointer">View more</p>
+        </div>
+        <div class="w-full flex-1">
+          <div class="h-full w-full flex flex-col">
+            <div class="flex flex-col gap-4 flex-1">
+              <div class="flex-1 grid grid-cols-2 gap-4 rounded-2xl px-4 py-5 bg-white">
+                <div class="h-full w-full rounded-md" style="background: url('img/Kent-Bicycles-18-inch-Girl-s-Sparkles-Bicycle-Black-and-Pink_b37eed4d-1e14-40a8-b237-5ef3dbca1458.36030dbee152c4d3e58db155e0a9bcfd.webp') center; background-size: cover;"></div>
+                <h2 class="flex items-center font-bold">Lowest price in 180 days</h2>
+              </div>
+              <div class="rounded-2xl px-4 py-5 bg-white">
+                <h3 class="font-bold text-sm pb-4">Deals on best sellers</h3>
+                <div class="rounded-lg w-full" style="height: 250px;">
+                  <div class="h-full w-full rounded-md" style="background: url('img/2000430.png') center; background-size: cover;"></div>
+                </div>
+              </div>
+            </div>
+          </div>        
+        </div>
+      </section>
+    </section>
+  </section>
+
+
+  <!-- 3 Cats + Cards -->
+  <section class="px-10 py-14">
+    <h1 class="font-bold text-2xl pb-7">Source direct-from-factory</h1>
+    <section class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 lg:px-28">
+      
+      <!-- Loop through sources array -->
+      <section class="h-80 rounded-lg relative overflow-hidden text-white">
+        <img src="img/2021_vanelli_v_design_page_banner.jpg" alt="Fabric Image" class="h-full w-full object-cover">
+        <div class="absolute top-0 left-0 w-full h-full" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7));"></div>
+        <div class="absolute top-0 h-full w-full left-0 px-4 pb-4 text-left z-10 flex flex-col justify-between">
+          <h2 class="font-bold text-sm pt-4">Get samples</h2>
+          <a href="#" class="pt-2 text-xs underline">View more</a>
+        </div>
+      </section>
+
+      <section class="h-80 rounded-lg relative overflow-hidden text-white">
+        <img src="img/64ac41bb6d7e02001af8ac5d.webp" alt="Workers Image" class="h-full w-full object-cover">
+        <div class="absolute top-0 left-0 w-full h-full" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7));"></div>
+        <div class="absolute top-0 h-full w-full left-0 px-4 pb-4 text-left z-10 flex flex-col justify-between">
+          <h2 class="font-bold text-sm pt-4">Take factory live tours</h2>
+          <a href="#" class="pt-2 text-xs underline">View LIVE</a>
+        </div>
+      </section>
+
+      <section class="h-80 rounded-lg relative overflow-hidden text-white">
+        <img src="img/56917962_2305444649696391_753261517675167744_o.jpg" alt="Factory Image" class="h-full w-full object-cover">
+        <div class="absolute top-0 left-0 w-full h-full" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7));"></div>
+        <div class="absolute top-0 h-full w-full left-0 px-4 pb-4 text-left z-10 flex flex-col justify-between">
+          <h2 class="font-bold text-sm pt-4">Connect with top-ranking manufacturers</h2>
+          <a href="#" class="pt-2 text-xs underline">View more</a>
+        </div>
+      </section>
+      
+    </section>
+  </section>
+
+
+  <!-- 2 cool looking cards -->
+  <section class="lg:h-screen w-full relative overflow-hidden text-white" style="background: url(img/20190520182221-GettyImages-1132121143.jpeg) center no-repeat; background-size: cover;">
+    <div class="relative px-9 py-16 darkBlueTrans h-full w-full">
+      <section class="grid md:grid-cols-2 gap-7 pb-16">
+        <h1 class="font-bold text-3xl">
+          Trade with confidence from production quality to purchase protection
+        </h1>
+      </section>
+      <section class="grid md:grid-cols-2 gap-7">
+        <div class="rounded-xl relative p-9 bg-opacity-20 bg-white">
+          <p class="text-sm pb-5">Ensure production quality with</p>
+          <h2 class="pb-6 font-bold text-3xl flex items-center verifiedColor">
+            <span style="color: var(--blue)">V</span>erified Supplier
+          </h2>
+          <p class="text-xs pb-9">Connect with a variety of suppliers with third-party verified credentials and capabilities. Look for the 'Verified' logo to begin sourcing with experienced suppliers your business could rely on.</p>
+          <div class="flex gap-4 text-sm items-center">
+            <button class="flex items-center gap-1 border rounded-full px-4 py-2 blackTrans"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zM8 14.25V5.75l6.5 4.75-6.5 4.75z" clip-rule="evenodd"/></svg> Watch Video</button>
+            <a href="#" class="underline">Learn more</a>
+          </div>
+        </div>
+        <div class="rounded-xl relative p-9 bg-opacity-20 bg-white">
+          <p class="text-sm pb-5">Protect your Purchase with</p>
+          <h2 class="pb-6 font-bold text-3xl flex items-center tradeColor">
+            <span style="color: var(--yellow)">T</span>rade Assurance
+          </h2>
+          <p class="text-xs pb-9">Source confidently with access to secure payment options, protection against product or shipping issues, and mediation support for any purchase-related concerns when you order and pay on COCREATE.com</p>
+          <div class="flex gap-4 text-sm items-center">
+            <button class="flex items-center gap-1 border rounded-full px-4 py-2 blackTrans"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zM8 14.25V5.75l6.5 4.75-6.5 4.75z" clip-rule="evenodd"/></svg> Watch Video</button>
+            <a href="#" class="underline">Learn more</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+
+  <!-- cool looking dynamic list -->
+  <section class="px-9 py-20">
+    <h1 class="font-bold text-3xl pb-9">
+      Streamline ordering from search to fulfillment, all in one place
+    </h1>
+    <section class="grid sm:grid-cols-2 gap-4 lg:gap-56 relative sm:pb-0 pb-6">
+      <div class="mb-9 sm:mb-0 relative overflow-hidden h-auto">
+        <div class="absolute top-10 bg-gray-300" style="left: 23px; width: 2px; height: calc(100% - 60px)"></div>
+        <div id="icons-container" class="flex flex-col gap-3 pt-4">
+          <!-- Icons and titles dynamically added here -->
+        </div>
+      </div>
+      <div class="h-72 sm:h-full w-full relative overflow-hidden">
+        <img id="active-image" src="" alt="" class="absolute top-0 left-0 object-cover h-full w-full">
+      </div>
+    </section>
+  </section>
+
+
+  <!-- Footer -->
+  <section class="px-9 lg:px-48 pt-20 pb-9 text-white" style="background: var(--dark-blue);">
+    <section class="lg:flex lg:items-center lg:justify-between font-bold pb-14">
+      <div class="lg:pb-0 pb-4">
+        <h2 class="blueText text-lg pb-2">Are you a manufacturer?</h2>
+        <h1 class="text-3xl">Join us for more sales and returns</h1>
+      </div>
+      <div class="flex gap-4 text-sm">
+        <button class="blueBg px-3 py-1 rounded-full flex items-center gap-1">
+          Signup now <i class="fas fa-arrow-right"></i>
+        </button>
+        <button class="px-3 py-1 rounded-full" style="background: var(--footer-grey);">
+          Contact us
+        </button>
+      </div>
+    </section>
+    <hr class="pb-3">
+    <section class="text-xs grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-9">
+      <div class="text-xl font-bold">
+        <span class="blueText">DO</span>KA
+      </div>
+      <div class="footerGridItem">
+        <h2 class="font-bold pb-2">Knowledge Base</h2>
+        <ul class="footerList">
+          <li><a href="#">How it works</a></li>
+          <li><a href="#">Payments</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Fund Safety & Security</a></li>
+        </ul>
+      </div>
+      <div class="footerGridItem sm:block hidden">
+        <h2 class="font-bold pb-2">DOKA & You</h2>
+        <ul class="footerList">
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">User Conduct Guide</a></li>
+        </ul>
+      </div>
+      <div class="footerGridItem sm:block hidden">
+        <h2 class="font-bold pb-2">DOKA</h2>
+        <ul class="footerList">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">How we Work</a></li>
+        </ul>
+      </div>
+      <div class="footerGridItem md:block hidden">
+        <h2 class="font-bold pb-2">Services</h2>
+        <ul class="footerList">
+          <li><a href="#">Service 1</a></li>
+          <li><a href="#">Service 2</a></li>
+        </ul>
+      </div>
+    </section>
+    <p class="pt-12 text-xs footerGreyText">
+      If you would like to find out more about which entity you receive services from please click
+      <a href="#" class="underline">here</a>. If you have any other questions, please reach out to us via the in-app chat.
+    </p>
+  </section>
+
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
