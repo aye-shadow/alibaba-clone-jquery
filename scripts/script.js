@@ -135,7 +135,13 @@ const scrollRightButton = document.getElementById('scrollRightButton');
 const leftGradient = document.getElementById('leftGradient');
 const rightGradient = document.getElementById('rightGradient');
 
-const scrollAmount = 168;
+let scrollAmount = 0;
+
+const calculateScrollAmount = () => {
+    const categoryButton = document.querySelector('.category-button');
+    const gap = parseInt(window.getComputedStyle(scrollContainer).gap, 10);
+    scrollAmount = categoryButton.offsetWidth + gap;
+};
 
 const handleScroll = (direction) => {
     if (direction === 'left') {
@@ -162,8 +168,13 @@ const updateScrollButtons = () => {
 scrollLeftButton.addEventListener('click', () => handleScroll('left'));
 scrollRightButton.addEventListener('click', () => handleScroll('right'));
 scrollContainer.addEventListener('scroll', updateScrollButtons);
-window.addEventListener('resize', updateScrollButtons);
-
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('resize', () => {
+    calculateScrollAmount();
     updateScrollButtons();
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    calculateScrollAmount();
+    updateScrollButtons();
+});
+
