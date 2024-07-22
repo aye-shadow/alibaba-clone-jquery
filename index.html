@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <style>
     /* .navbarHeader {
       color: white;
@@ -44,8 +44,7 @@
       <div class="flex flex-row justify-between items-center px-9 py-2 relative navbar-background">
         <h1 class="flex flex-row items-center z-10">
           <span class="text-xl">
-            <span class="font-bold uppercase">
-              <span id="co-text" class="blueText">CO</span>CREATE<span id="colon-text" class="blueText">:</span></span>2024
+            <span class="font-bold uppercase"><span id="co-text" class="blueText">CO</span>CREATE<span id="colon-text" class="blueText">:</span></span>2024
           </span>
           <span class="text-xs px-2 hidden lg:block">|</span> 
           <span class="hidden lg:block">Join our award-winning flagship event with FREE hotel stay!</span>
@@ -57,8 +56,8 @@
           <div class="flex justify-between px-9 py-1 relative">
             <h1 class="text-3xl">
               <a href='#' class="flex items-center gap-2 relative">
-                <img id="logoWhite" src="img/new_logo_.png" class="h-5 mt-1">
-                <img id="logoDark" src="img/new_logo_dak.png" class="h-5 mt-1 hidden">
+                <img id="logoWhite" src="img/new_logo_.png" class="h-6 mt-1">
+                <img id="logoDark" src="img/new_logo_dak.png" class="h-6 mt-1 hidden">
                 <span><span class="font-bold">DOKA.</span>com</span>
               </a>
             </h1>
@@ -81,8 +80,6 @@
           <div id="navbarCategoriesSection" class="flex justify-between px-9 pt-3 text-xs">
             <ul class="flex gap-4">
               <a href='#'><li id="categoriesLink" class="flex gap-1 items-center h-full pb-5"><i class="fas fa-list-ul"></i> All Categories</li></a>
-              <a href='#'><li>Featured selections</li></a>
-              <a href='#'><li>Trade Assurance</li></a>
             </ul>
             <div class="hidden lg:block">
               <ul class="flex gap-4">
@@ -510,7 +507,7 @@
           </h2>
           <p class="text-xs pb-9">Connect with a variety of suppliers with third-party verified credentials and capabilities. Look for the 'Verified' logo to begin sourcing with experienced suppliers your business could rely on.</p>
           <div class="flex gap-4 text-sm items-center">
-            <button class="flex items-center gap-1 border rounded-full px-4 py-2 blackTrans"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zM8 14.25V5.75l6.5 4.75-6.5 4.75z" clip-rule="evenodd"/></svg> Watch Video</button>
+            <button class="flex items-center gap-2 border rounded-full px-4 py-2 blackTrans"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zM8 14.25V5.75l6.5 4.75-6.5 4.75z" clip-rule="evenodd"/></svg> Watch Video</button>
             <a href="#" class="underline">Learn more</a>
           </div>
         </div>
@@ -521,7 +518,7 @@
           </h2>
           <p class="text-xs pb-9">Source confidently with access to secure payment options, protection against product or shipping issues, and mediation support for any purchase-related concerns when you order and pay on COCREATE.com</p>
           <div class="flex gap-4 text-sm items-center">
-            <button class="flex items-center gap-1 border rounded-full px-4 py-2 blackTrans"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zM8 14.25V5.75l6.5 4.75-6.5 4.75z" clip-rule="evenodd"/></svg> Watch Video</button>
+            <button class="flex items-center gap-2 border rounded-full px-4 py-2 blackTrans"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zM8 14.25V5.75l6.5 4.75-6.5 4.75z" clip-rule="evenodd"/></svg> Watch Video</button>
             <a href="#" class="underline">Learn more</a>
           </div>
         </div>
@@ -567,9 +564,7 @@
     </section>
     <hr class="pb-3">
     <section class="text-xs grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-9">
-      <div class="text-xl font-bold">
-        <span class="blueText">DO</span>KA
-      </div>
+      <img src="./img/new_logo_.png" class="h-8">
       <div class="footerGridItem">
         <h2 class="font-bold pb-2">Knowledge Base</h2>
         <ul class="footerList">
@@ -610,6 +605,6 @@
   </section>
 
 
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="./scripts/script.js"></script>
 </body>
 </html>

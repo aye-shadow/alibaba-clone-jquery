@@ -80,14 +80,17 @@ $(document).ready(function() {
     //     }
     // );
 
-    $('#categoriesLink').mouseenter(function() {
-        $('#categoriesHeaderSection').stop(true, true).removeClass('hidden').fadeIn();
-    });
+    $('#categoriesLink').hover(
+        function() {
+            $('#categoriesHeaderSection').stop(true, true).fadeIn().removeClass('hidden');
+        }
+    );
 
-    // Keep categoriesHeaderSection visible when hovered
-    $('#categoriesHeaderSection').mouseenter(function() {
-        $(this).stop(true, true).fadeIn();
-    });
+    $('#categoriesHeaderSection').hover(
+        function() {
+            $(this).stop(true, true).fadeIn().removeClass('hidden');
+        }
+    );
 
     // Handle mouseleave events to fade out categoriesHeaderSection
     $('#categoriesHeaderSection, #categoriesLink').mouseleave(function() {
